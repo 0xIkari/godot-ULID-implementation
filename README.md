@@ -1,4 +1,4 @@
-# gdulid
+# Godot ULID Implementation
 
 A spec-compliant [ULID](https://github.com/ulid/spec) implementation in pure GDScript for Godot 4, with an optional entity registry for tracking and searching ULIDs by name and type.
 
@@ -235,7 +235,7 @@ var bobs = ULIDRegistry.find_by_name_contains("Bob")
 
 The ULID core is useful for any Godot project that needs unique, sortable identifiers: save systems, multiplayer, entity tracking, undo/redo, modding support.
 
-The registry is a convenience layer for projects that want quick entity tracking without building a custom system. It works well for prototyping, game jams, small-to-medium projects, and as a reference implementation of indexed entity lookup in GDScript.
+The registry is a convenience layer for projects that want quick entity tracking without building a custom system. It works well for prototyping, game jams, small-to-medium projects, and as a reference implementation of indexed entity lookup in GDScript. 
 
 Larger projects will likely want entity tracking integrated with their own architecture (scene tree management, ECS, networking) rather than a standalone generic registry. The registry is designed to be easy to outgrow: if you eventually replace it with something project-specific, the ULID core continues to work unchanged.
 
